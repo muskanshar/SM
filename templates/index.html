@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimony Website</title>
+    <link rel="stylesheet" href="/Final_Webmet/static/css/style.css">
+
+
+
+    
+</head>
+<body>
+    <header>
+        <nav class = "top" >
+            <div class="logo1">
+                <img src="./images/logo.jpeg">
+                </div>
+            <div class="logo"><a href ="index.html">WEBMET</a></div>
+            
+            <ul class="top-nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="navbar">
+        <div class="menu-icon">&#9776;</div>
+        <div class="logo">
+          <div class="menu-icon">&#9776;</div>
+          <span>WEB<span class="highlight">MET</span></span>
+        </div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">EXPLORE</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">ALL PAGES</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">TOP PAGES</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">PLANS</a>
+                <div class="dropdown-content">
+                    <a href="#">Topic 1</a>
+                    <a href="#">Topic 2</a>
+                    <a href="#">Topic 3</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">REGISTER</a>
+                <div class="dropdown-content">
+                    <a href="#">Topic 1</a>
+                    <a href="#">Topic 2</a>
+                    <a href="#">Topic 3</a>
+                </div>
+            </li>
+        </ul>
+        <div class="profile">
+          <span class="role">ADVISOR</span>
+          <div class="profile-details">
+            <img src="./images/250523125151-matrimonial-services-in-hyderabad.jpg" alt="Profile Picture">
+            <span>Ashley emyy</span>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuIcon = document.querySelector(".menu-icon");
+            const navLinks = document.querySelector(".nav-links");
+
+            // Toggle the menu visibility when the menu icon is clicked
+            menuIcon.addEventListener("click", function() {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+</button>
+    <section class="hero">
+        <div class="container"> <!-- Wrapping hero section in container -->
+            <h1 style="font-size: 70px; color: white; text-shadow: 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;">
+                Find Your <span style="color: rgb(144, 68, 68);">Perfect Match</span>
+            </h1>     
+            <p style="font-size: 30px; color: rgb(199, 77, 95); text-shadow: 2px 2px 4px black, -2px -2px 4px black, 2px -2px 4px black, -2px 2px 4px black;">
+                Your journey to happiness starts here.
+            </p>
+            
+            
+
+            <div class="search-form-container">
+                <form action="" method="get" class="search-form">
+                    <!-- Who I am looking for -->
+                    <div class="search-option">
+                        <select id="looking-for" name="looking_for">
+                            <option value="" disabled selected>I'm looking for</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <!-- Age -->
+                    <div class="search-option">
+                        <select id="age" name="age">
+                            <option value="" disabled selected>Select Age Range</option>
+                            <option value="18-30">18 to 30</option>
+                            <option value="30-40">30 to 40</option>
+                            <option value="40-50">40 to 50</option>
+                            <option value="51-60">51 to 60</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Religion -->
+                    <div class="search-option">
+                        <select id="religion" name="religion">
+                            <option value="" disabled selected>Select Religion</option>
+                            <option value="any">Any</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="muslim">Muslim</option>
+                            <option value="christian">Christian</option>
+                            <option value="sikh">Sikh</option>
+                            <option value="jain">Jain</option>
+                        </select>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="search-option">
+                        <select id="location" name="location">
+                            <option value="" disabled selected>Select Location</option>
+                            <option value="city1">City 1</option>
+                            <option value="city2">City 2</option>
+                            <option value="city3">City 3</option>
+                        </select>
+                    </div>
+
+                    <!-- Search Button -->
+                    <div class="search-button">
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div> <!-- End of container div for hero section -->
+    </section>
+
+    <!-- <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Are you ready to embark on an extraordinary journey to find the one to spend your life with? At Webmet, we are dedicated to igniting the flames of love and companionship. Our mission is to bring together soulmates and foster a community of individuals seeking genuine connections. Whether you're in search of your soulmate or a loving partner to share life's most beautiful moments, our platform is perfectly designed for you. Join our vibrant community and get ready to discover the one, make unforgettable memories, and build a future filled with love and joy. Let's turn your dreams of finding the one into a splendid reality! Get in touch with us: love@webmet.com</p>
+        <p>Matchmaking is personalized service that connects individuals looking for meaningful relationships Unlike traditional dating methods, matchmaking focuses on understanding each person's preferences, values, and relationship goals. This tailored approach often leads to more compatible matches and deeper connections.The benefits of matchmaking are numerous. First, it saves time by filtering out incompatible partners, allowing you to focus on those who truly align with your desires. Second, matchmakers offer expert guidance and support throughout the process, helping you navigate the complexities of dating. Finally, matchmaking fosters a sense of community, as you connect with others who are also seeking genuine relationships. Embrace the journey of love with the help of a dedicated matchmaker! </p>
+    </section> -->
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="./images/images 16.jpeg" alt="Service 1">
+                <h2>Personalized Matches</h2>
+                <h3>Tailored recommendations just for you.</h3>
+            </div>
+            <div class="card">
+                <img src="./images/abt_bg.jpg" alt="Service 2">
+                <h2>Verified Profiles</h2>
+                <h3>Ensuring authenticity and trust.</h3>
+            </div>
+            <div class="card">
+                <img src="images/9 Best Everything images in 2020.jpeg" alt="Service 3">
+                <h2>24/7 Support</h2>
+                <h3>We’re here to help anytime you need us.</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Need help - WE ARE HERE FOR YOU!</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        
+    </section>
+
+
+
+    <script src="webmet.js"></script>
+
+    <!-- Footer -->
+     
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Info Section -->
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li><strong>Email:</strong> contact@webmet.com</li>
+                    <li><strong>Phone:</strong> +1 234 567 890</li>
+                    <li><strong>Address:</strong> 123 WebMet Street, City, Country</li>
+                </ul>
+            </div>
+            <!-- Social Media Section -->
+            <div class="col-md-4 text-center">
+               
+                
+                <div class="social-banner">
+                    <a href="#">
+                        <i class="bi bi-facebook-f"></i> <!-- Facebook icon -->
+                    </a>
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-twitter"></i> <!-- Twitter icon -->
+                    </a>
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-instagram"></i> <!-- Instagram icon -->
+                    </a>
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-linkedin-in"></i> <!-- LinkedIn icon -->
+                    </a>
+                </div>
+            </div>
+            <!-- Additional Info Section -->
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>WebMet is your go-to platform for web services and solutions. Learn more about us and our offerings.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer bottom -->
+    <div class="text-center mt-4">
+        <p>&copy; 2025 WebMet. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

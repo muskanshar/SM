@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadi Matches</title>
+    <link rel="stylesheet" href="/Final_Webmet/static/css/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #74c3c5;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .matches-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .match-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 10px;
+            width: 200px;
+        }
+        .match-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .pagination {
+            text-align: center;
+            margin: 20px;
+        }
+        .pagination button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            background-color: #d32f2f;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class = "top" >
+        <div class="logo1">
+            <img src="./images/logo.jpeg">
+            </div>
+        <div class="logo"><a href ="index.html">WEBMET</a></div>
+        
+        <ul class="top-nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<nav class="navbar">
+    <div class="menu-icon">&#9776;</div>
+    <div class="logo">
+      <div class="menu-icon">&#9776;</div>
+      <span>WEB<span class="highlight">MET</span></span>
+    </div>
+    <ul class="nav-links">
+        <li class="dropdown">
+            <a href="#">EXPLORE</a>
+            <div class="dropdown-content">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">ALL PAGES</a>
+            <div class="dropdown-content">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">TOP PAGES</a>
+            <div class="dropdown-content">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">PLANS</a>
+            <div class="dropdown-content">
+                <a href="#">Topic 1</a>
+                <a href="#">Topic 2</a>
+                <a href="#">Topic 3</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">REGISTER</a>
+            <div class="dropdown-content">
+                <a href="#">Topic 1</a>
+                <a href="#">Topic 2</a>
+                <a href="#">Topic 3</a>
+            </div>
+        </li>
+    </ul>
+    <div class="profile">
+      <span class="role">ADVISOR</span>
+      <div class="profile-details">
+        <img src="./images/250523125151-matrimonial-services-in-hyderabad.jpg" alt="Profile Picture">
+        <span>Ashley emyy</span>
+      </div>
+    </div>
+  </nav>
+
+   
+    <div class="matches-container" id="matches">
+        <!-- Match cards will be injected here -->
+    </div>
+    <div class="pagination">
+        <button onclick="prevPage()">&lt; Prev</button>
+        <button onclick="nextPage()">Next &gt;</button>
+    </div>
+    <script>
+        const matches = [
+            {name: "Rakesh", age: 30, profession: "Engineer", location: "Uttarakhand, India", img: "https://via.placeholder.com/200"},
+            {name: "Rakesh", age: 29, profession: "Manager", location: "West Bengal, India", img: "https://via.placeholder.com/200"},
+            {name: "Ankit", age: 34, profession: "Artist", location: "Delhi, India", img: "https://via.placeholder.com/200"},
+            {name: "Tej", age: 30, profession: "Finance", location: "Madhya Pradesh, India", img: "https://via.placeholder.com/200"}
+        ];
+
+        function loadMatches() {
+            const container = document.getElementById("matches");
+            container.innerHTML = "";
+            matches.forEach(match => {
+                container.innerHTML += `
+                    <div class="match-card">
+                        <img src="${match.img}" alt="${match.name}">
+                        <h3>${match.name}</h3>
+                        <p>${match.age} yrs, ${match.profession}</p>
+                        <p>${match.location}</p>
+                        <button>View Profile</button>
+                    </div>
+                `;
+            });
+        }
+        
+        function prevPage() {
+            alert("Previous Page Clicked");
+        }
+        
+        function nextPage() {
+            alert("Next Page Clicked");
+        }
+
+        loadMatches();
+    </script>
+</body>
+</html>

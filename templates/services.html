@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="/Final_Webmet/static/css/style.css">
+
+  <style>
+   .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 40px auto; /* Adjusts the spacing */
+    padding: 20px;
+    max-width: 100%; /* Ensures images span the full width of the page */
+  
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 800px; /* Set a consistent height for all images */
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adds space around the text */
+  box-sizing: border-box;
+  text-align: center; /* Centers the text horizontally */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.2rem; /* Scalable text size */
+  overflow-wrap: break-word; /* Ensures text doesn't overflow */
+  overflow-y: auto; /* Allows scrolling if text overflows */
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+    <header>
+      <nav class="top">
+        <div class="logo"><a href ="index.html">WEBMET</a></div>
+            <ul class="top-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="navbar">
+        <div class="menu-icon">&#9776;</div>
+
+        <div class="logo">
+          <div class="menu-icon">&#9776;</div>
+          <span>WEB<span class="highlight">MET</span></span>
+        </div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">EXPLORE</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">ALL PAGES</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">TOP PAGES</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">PLANS</a>
+                <div class="dropdown-content">
+                    <a href="#">Topic 1</a>
+                    <a href="#">Topic 2</a>
+                    <a href="#">Topic 3</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">REGISTER</a>
+                <div class="dropdown-content">
+                    <a href="#">Topic 1</a>
+                    <a href="#">Topic 2</a>
+                    <a href="#">Topic 3</a>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="profile">
+          <span class="role">ADVISOR</span>
+          <div class="profile-details">
+            <img src="./images/250523125151-matrimonial-services-in-hyderabad.jpg" alt="Profile Picture">
+            <span>Ashley emyy</span>
+          </div>
+        </div>
+      </nav>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuIcon = document.querySelector(".menu-icon");
+            const navLinks = document.querySelector(".nav-links");
+
+            // Toggle the menu visibility when the menu icon is clicked
+            menuIcon.addEventListener("click", function() {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+    </button>
+  </header>
+
+  <div class="image-grid">
+    <div class="image-container">
+      <img src="images/N M.jpeg" alt="Image 1">
+      <div class="overlay">
+        <h2>Personalised Matchmaking Services</h2>
+<p>At WebMet, we offer personalized matchmaking services tailored to your unique preferences and values. Our expert matchmakers take the time to understand your relationship goals, ensuring that every connection we facilitate is meaningful and compatible. Unlike traditional dating methods, our approach is focused on quality over quantity, providing you with carefully curated matches that align with your vision of love and companionship.</p>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/night.jpeg" alt="Image 2">
+      <div class="overlay">
+        <h2>Celebrating Love and Lifelong Bonds</h2>
+            <p>At WebMet, we offer personalized matchmaking services tailored to your unique preferences and values. Our expert matchmakers take the time to understand your relationship goals, ensuring that every connection we facilitate is meaningful and compatible. Unlike traditional dating methods, our approach is focused on quality over quantity, providing you with carefully curated matches that align with your vision of love and companionship.</p>
+            </p>
+        
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/mehndi.jpeg" alt="Image 3">
+      <div class="overlay">
+        <h2>Our Expert Matchmakers</h2>
+        <p> Navigating the complexities of dating can be overwhelming, but with WebMet, you're never alone. Our team of experienced matchmakers provides expert guidance and unwavering support throughout your journey. From offering valuable relationship advice to helping you build confidence in your interactions, we are here to ensure that your path to finding love is smooth, fulfilling, and stress-free.</p>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/band b.jpeg" alt="Image 4">
+      <div class="overlay">
+        
+        <h2>Community of Like-Minded Individuals</h2>  
+        <p>Joining WebMet means becoming part of a vibrant community of like-minded individuals who are also seeking love and companionship. Our platform is more than just a matchmaking service; it's a space where you can connect with others who share your aspirations for a meaningful relationship. Together, we create a supportive and uplifting environment that celebrates the journey of love.</p>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/twirl.jpeg" alt="Image 5">
+      <div class="overlay">
+        <h2>Time-Saving Matchmaking Solutions</h2>
+        <p> In today's fast-paced world, time is a precious commodity. Our matchmaking services are designed to save you time by filtering out incompatible partners and introducing you to individuals who truly align with your values and goals. With WebMet, you can focus on building meaningful connections rather than sifting through endless profiles or engaging in superficial conversations.</p>
+
+    </div>
+    </div>
+    <div class="image-container">
+      <img src="images/bandg.jpeg" alt="Image 6">
+      <div class="overlay">
+        <h2>Genuine Connections and Compatibility</h2>
+        <p> At WebMet, we believe that genuine connections are the foundation of lasting relationships. Our platform fosters an environment where individuals seeking meaningful relationships can come together and bond over shared values and interests. Our compatibility-focused matchmaking process ensures that every introduction has the potential to blossom into a beautiful and enduring partnership.</p>
+      </div>
+    </div>
+  </div>
+  <section id="contact" class="contact">
+    <h2>Need help - WE ARE HERE FOR YOU!</h2>
+    </section>
+  <!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Info Section -->
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li><strong>Email:</strong> contact@webmet.com</li>
+                    <li><strong>Phone:</strong> +1 234 567 890</li>
+                    <li><strong>Address:</strong> 123 WebMet Street, City, Country</li>
+                </ul>
+            </div>
+            <!-- Social Media Section -->
+            <div class="col-md-4 text-center">
+               
+                
+                <div class="social-banner">
+                    <a href="#">
+                        <i class="bi bi-facebook-f"></i> <!-- Facebook icon -->
+                    </a>
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-twitter"></i> <!-- Twitter icon -->
+                    </a>
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-instagram"></i> <!-- Instagram icon -->
+                    </a>
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-linkedin-in"></i> <!-- LinkedIn icon -->
+                    </a>
+                </div>
+            </div>
+            <!-- Additional Info Section -->
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>WebMet is your go-to platform for web services and solutions. Learn more about us and our offerings.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer bottom -->
+    <div class="text-center mt-4">
+        <p>&copy; 2025 WebMet. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

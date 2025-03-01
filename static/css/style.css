@@ -1,0 +1,781 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #de4558;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .top-nav-links {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        gap: 10px; /* Reduce spacing */
+    }
+}
+
+.top nav{
+    background: #de4558;
+}
+.top-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.top-nav-links li {
+    display: inline;
+}
+
+.top-nav-links a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    
+    /* font-size: 2em; */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo1 img{ 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+.navbar-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Media query for mobile view (max-width 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+    
+
+    .nav-links, ul {
+        overflow: visible; /* Allow dropdown to appear outside parent */
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #b23f59;
+    }
+
+    .profile {
+        margin-top: 20px;
+    }
+}
+
+/* Styles for the mobile menu icon (hamburger menu) */
+.menu-icon {
+    display: none; /* Hidden by default */
+}
+
+/* When the screen width is less than 768px, the menu icon appears */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+}
+/* selection and search   */
+.hero {
+    background: url('./images/banner.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero button {
+    background: #ff5722;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Container for the form with translucent black background */
+.search-form-container {
+    background: rgba(0, 0, 0, 0.5); /* Translucent black background */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Flexbox for form layout */
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Style for each search option */
+.search-option {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    min-width: 180px;
+}
+
+/* Beautify the select dropdown */
+.search-option select {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: white;
+    color: #b23f59c4; /* red color for text */
+    border: 2px solid #f30e28ae; /* red border */
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    appearance: none; /* Remove default dropdown arrow */
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover/focus effects */
+}
+
+/* Custom dropdown arrow */
+.search-option select::-ms-expand {
+    display: none; /* Remove default arrow for IE */
+}
+
+/* Focus effect to highlight the dropdown */
+.search-option select:focus {
+    border-color: #e44359c2; /* Slightly darker orange when focused */
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.5); /* Glow effect */
+}
+
+/* Hover effect for the select element */
+.search-option select:hover {
+    border-color: #8c4168; /* Slightly darker border on hover */
+}
+
+/* Styling options inside the select dropdown */
+.search-option select option {
+    background-color: rgb(255, 255, 255);
+    color: #333; /* Darker color for options */
+    padding: 8px;
+    text-align: center;
+}
+
+/* Disabled option with bold and gray color */
+.search-option select option:disabled {
+    color: #b3b3b3;
+    font-weight: bold;
+}
+
+/* Label styling */
+.search-option label {
+    font-size: 16px;
+    color: #fff; /* White color for label text */
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style for the search button */
+.search-button button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #de4558;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the search button */
+.search-button button:hover {
+    background-color: #b54e5d; /* Lighten on hover */
+}
+
+/* Focused or hovered state for the search button */
+.search-button button:focus {
+    outline: none;
+}
+
+
+/* ------------------------service on main page--------------------------- */
+
+.services .card-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 600px;
+    text-align: left;
+    width: 600px; /* Increase the width */
+    height: 550px; /* Increase the height */
+    
+}
+
+.card img {
+    width: 100%;
+    height: 70%;
+}
+
+.card h2 {
+    margin: 1rem 0 0.5rem;
+    padding: 0 1rem;
+}
+
+.card h3 {
+    padding: 0 1rem 1rem;
+}
+
+/* ---- ---------------------second nav ------------------------ -----*/
+
+header {
+    background: #b23f59d6;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: #be5f72fa;
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Container to prevent scaling */
+.container {
+    max-width: 1200px;  /* You can adjust this value based on your design */
+    margin: 0 auto;
+    padding: 0 20px; /* Padding to ensure content doesn't touch the sides */
+    overflow: hidden;
+}
+/* Reset */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: white;
+    border-bottom: 2px solid #dcdcdc;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .logo .menu-icon {
+    font-size: 20px;
+    display: none; /* Hidden by default */
+    color:#b23f59;
+    cursor: pointer;
+  }
+  
+  .logo .highlight {
+    color: #af3645;
+  }
+  .logo a {
+    color: #fdf8f8;
+   
+    /* font-size: 3em; */
+  }
+  .nav-links a {
+    color: #f0eaea;
+    padding: 10px;
+    display: block;
+
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links li {
+    position: relative;
+}
+  
+  .nav-links li a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #a9585bd2;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile .role {
+    font-size: 12px;
+    color: #181817;
+    font-weight: bold;
+  }
+  
+  .profile-details {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .profile-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .profile-details span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #171617;
+  }
+    
+/* --------------------------Footererr̥ -------------------------------*/
+
+footer {
+    background: #b23f59d6;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+  .welcome-section {
+    position: relative;
+    background: url('./images/wedding.jpeg') no-repeat center;
+    background-size: cover; 
+    height: auto;
+    width: auto;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* .welcome-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: 1;
+  } */
+  /* ------------------------- Aboutus-------------------------------------*/
+  .welcome-section .content {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 60%); /* White overlay with 90% opacity for text clarity */
+    width: 99%;
+    height: 100%; 
+    /* border-radius: 10px; */
+    /* max-width: 800px; */
+  }
+  
+  .welcome-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center */
+    padding: 20px; /* Optional: for spacing inside the content */
+    border-radius: 0; /* No border-radius for full coverage */
+    box-sizing: border-box; /* Include padding in dimensions */
+  }
+  
+  .welcome-section h3 {
+    font-size: 1.2rem;
+    color: #555;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center */
+    padding: 20px; /* Optional: for spacing inside the content */
+    border-radius: 0; /* No border-radius for full coverage */
+    box-sizing: border-box; /* Include padding in dimensions */
+  }
+
+
+/* About Us Section */
+.about-us {
+    text-align: center;
+    padding: 50px 20px;
+   
+    color: #fff;
+}
+
+.about-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:black; /* Golden color */
+}
+
+
+
+.about-header p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #080808;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.feature-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #640712cc; /* Golden color for #1 */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* About Us Section */
+    .about-us {
+        padding: 30px 15px;
+    }
+
+    .about-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-header p {
+        font-size: 1rem;
+    }
+
+    /* Features Section */
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+        flex-wrap: wrap; /* Default wrapping */
+        overflow-x: auto; /* Enables horizontal scrolling */
+        scroll-behavior: smooth; /* Smooth scrolling */
+        padding: 10px; /* Space for scrollbar */
+    }
+    .features::-webkit-scrollbar {
+        height: 8px; /* Scrollbar height */
+    }
+    
+    .features::-webkit-scrollbar-thumb {
+        background: #ccc; /* Scrollbar color */
+        border-radius: 10px; /* Rounded edges */
+    }
+
+    .feature-card {
+        width: calc(20% - 20px); /* Two cards per row */
+        flex-shrink: 0; /* Prevent cards from shrinking */
+    }
+
+    .feature-card h3 {
+        font-size: 1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* About Us Section */
+    .about-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .about-header p {
+        font-size: 0.9rem;
+    }
+
+    /* Features Section */
+    .feature-card {
+        width: 100%; /* Full width on very small screens */
+    }
+
+    .feature-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .feature-card p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Dropdown styles */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown {
+    position: relative; /* Required for dropdown-content to position itself relative to this */
+    z-index: 1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f2e9e9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+
+
+/* Media Queries for Responsive Design */
+
+/* For Tablets (Width between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .services .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Make cards smaller for tablets */
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .search-option {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* For Mobile Devices (Width less than 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto; /* Allow cards to adjust height */
+    }
+
+    .services .card-container {
+        flex-direction: column;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-section h3 {
+        font-size: 1rem;
+    }
+
+    .feature-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .search-section {
+        padding: 10px;
+    }
+}
+
+/* Hide the menu icon by default */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #b23f59;
+}
+
+/* When the screen width is less than 768px, show the menu icon */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide nav-links by default on smaller screens */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* Show nav-links when active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

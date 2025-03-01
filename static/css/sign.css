@@ -1,0 +1,190 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url("{{ url_for('static', filename='images/0.jpeg') }}") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow: hidden; /* Ensures no content spills outside */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 90%; /* Ensures responsiveness */
+    width: 90%;
+    max-height: 80vh; /* Prevents overflow on small screens */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 20px;
+    
+    border-radius: 10px;
+}
+/* Make sure input fields and buttons are also responsive */
+form input, form textarea, form button {
+    width: 100%; /* Full width */
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Ensure it adapts to smaller screens */
+@media (max-width: 600px) {
+    form {
+        max-height: 60vh; /* Adjust height for small screens */
+    }
+}
+
+
+/* Password Container */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgb(151, 99, 99);
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #d85e72;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background: #cb5050;
+}
+
+/* Centering Options (Remember Me + Forgot Password) */
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* Checkbox */
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adjust spacing between checkbox and text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.options input[type="checkbox"] {
+    margin: 0; /* Remove extra margin */
+    padding: 0; /* Remove extra padding */
+    vertical-align: middle; /* Align it with the text */
+}
+
+/* Forgot Password Link */
+.options a {
+    color: #f6f6f6f0;
+    text-decoration: none;
+}
+
+/* Gender Selection */
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* Form Switch Links */
+.switch-form {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.switch-form span {
+    color: #de6464b4;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* Ensure select dropdowns match input styling */
+form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    color: rgb(117, 115, 115);
+    cursor: pointer;
+    box-sizing: border-box; /* Ensures consistent width */
+    appearance: none; /* Removes default browser styling */
+}
+
+/* Fix inconsistencies between input and select fields */
+form input, form textarea, form button, form select {
+    display: block;
+    width: 100%; /* Ensures all elements take up the full width */
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black"><path d="M5.5 7l4.5 4 4.5-4"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+    padding-right: 30px; /* Space for the arrow */
+
+}
+
+/* Optional: Add focus effect */
+form select:focus {
+    outline: none;
+    border-color: #d85e72;
+    box-shadow: 0 0 5px rgba(216, 94, 114, 0.5);
+}
+
+/* Optional: Add focus effect */
+form select:focus {
+    outline: none;
+    border-color: #d85e72;
+    box-shadow: 0 0 5px rgba(216, 94, 114, 0.5);
+}

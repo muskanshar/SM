@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Shadi.com</title>
+    <link rel="stylesheet" href="/Final_Webmet/static/css/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        .header {
+            background-color: #0073b1;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .chat-container {
+            display: flex;
+            height: 90vh;
+        }
+        .chat-sidebar {
+            width: 25%;
+            background: white;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        .chat-sidebar h3 {
+            margin: 10px;
+            font-size: 18px;
+        }
+        .chat-sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .chat-sidebar ul li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .chat-sidebar ul li:hover {
+            background: #e6f7ff;
+        }
+        .chat-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+        .chat-header {
+            padding: 15px;
+            background: #f8f9fa;
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+        }
+        .chat-box {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 60%;
+        }
+        .sent {
+            align-self: flex-end;
+            background: #0073b1;
+            color: white;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #b23f59d6;
+    border-bottom: 2px solid #dcdcdc;
+}
+        .received {
+            align-self: flex-start;
+            background: #eee;
+        }
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background: #f8f9fa;
+            border-top: 1px solid #ddd;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+        .chat-input button {
+            margin-left: 10px;
+            padding: 10px 15px;
+            border: none;
+            background: #b23f59d6;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo1">
+            <img src="./images/logo.jpeg">
+            </div>
+        <div class="logo"><a href ="index.html">WEBMET</a></div>
+        
+        <ul class="top-nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="chat-container">
+        <div class="chat-sidebar">
+            <h3>Chats</h3>
+            <ul id="chat-list">
+                <li onclick="openChat('User 1')">User 1</li>
+                <li onclick="openChat('User 2')">User 2</li>
+                <li onclick="openChat('User 3')">User 3</li>
+            </ul>
+        </div>
+        <div class="chat-main">
+            <div class="chat-header" id="chat-header">Select a chat</div>
+            <div class="chat-box" id="chat-box"></div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openChat(userName) {
+            document.getElementById('chat-header').textContent = userName;
+            document.getElementById('chat-box').innerHTML = '';
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('message-input');
+            const message = input.value.trim();
+            if (message === '') return;
+
+            const chatBox = document.getElementById('chat-box');
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('chat-message', 'sent');
+            msgDiv.textContent = message;
+            chatBox.appendChild(msgDiv);
+            input.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>
